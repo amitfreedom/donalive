@@ -17,21 +17,22 @@
         android:theme="@style/Theme.DonaApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.home.activity.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.splash.CustomSplashActivity"
-            android:theme="@style/Theme.App.Starting"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.App.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.App.Starting">
-        </activity>
+            android:theme="@style/Theme.App.Starting" />
         <activity
             android:name="com.mobile.donalive.MainActivity"
             android:exported="false" />

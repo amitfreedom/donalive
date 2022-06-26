@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,60 +8,157 @@
     tools:context=".ui.starter.StarterFragment">
 
     <LinearLayout
-        android:layout_centerInParent="true"
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:src="@drawable/logo"/>
+            android:src="@drawable/logo" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginHorizontal="30dp">
+            android:layout_marginHorizontal="30dp"
+            android:orientation="vertical">
 
             <TextView
-                android:paddingVertical="10dp"
+                style="@style/HeaderTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/continue_with"
-                style="@style/HeaderTextStyle"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:gravity="start"/>
+                android:gravity="start"
+                android:paddingVertical="10dp"
+                android:text="@string/continue_with" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_email"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 style="@style/MyButtonStyle_1"
-                android:text="Email"/>
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:text="Email" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_google"
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 style="@style/MyButtonStyle_2"
-                android:text="Google"/>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_marginTop="15dp"
+                android:text="Google" />
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/MyButtonStyle_3"
-                android:text="Phone"/>
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
+                    <TextView
+                        style="@style/NormalTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="or" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageButton
+                android:visibility="visible"
+                android:id="@+id/btn_view_more"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_more_horiz_24"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/green_bg"
+                app:tint="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/btn_more_button"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_whatsapp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_icons8_whatsapp"
+                    android:layout_marginTop="30dp"
+                    android:padding="5dp"
+                    android:background="@drawable/green_bg"
+                    app:tint="@color/white" />
+
+                <ImageButton
+                    android:layout_marginHorizontal="20dp"
+                    android:id="@+id/btn_phone"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_phone_iphone_24"
+                    android:layout_marginTop="30dp"
+                    android:padding="5dp"
+                    android:background="@drawable/white_bg"
+                    app:tint="@color/app_color3" />
+
+                <ImageButton
+                    android:id="@+id/btn_facebook"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_facebook"
+                    android:layout_marginTop="30dp"
+                    android:padding="5dp"
+                    android:background="@drawable/white_bg"
+                    app:tint="@color/app_color2" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -68,7 +166,7 @@
 
     <TextView
         android:id="@+id/btn_term_condition"
-        style="@style/NormalTextStyle"
+        style="@style/SmallTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -76,7 +174,5 @@
         android:gravity="center"
         android:paddingVertical="10dp"
         android:text="@string/term_condition" />
-
-
 
 </RelativeLayout>

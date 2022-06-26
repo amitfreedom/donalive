@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home" />
+    <item android:id="@+id/action_video"
+        android:title="@string/video"
+        android:icon="@drawable/ic_video" />
+    <item android:id="@+id/action_live"
+        android:title="@string/live"
+        android:icon="@drawable/ic_baseline_live" />
+    <item android:id="@+id/action_chat"
+        android:title="@string/chat"
+        android:icon="@drawable/ic_chat" />
+    <item android:id="@+id/action_user"
+        android:title="@string/user"
+        android:icon="@drawable/ic_user_account" />
+</menu>

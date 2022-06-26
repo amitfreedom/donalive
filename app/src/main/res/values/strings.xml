@@ -43,4 +43,9 @@
     <string name="txt_male">Male</string>
     <string name="txt_female">Female</string>
     <string name="txt_enter">Enter</string>
+    <string name="home">Home</string>
+    <string name="video">Video</string>
+    <string name="live">Live</string>
+    <string name="chat">Chat</string>
+    <string name="user">User</string>
 </resources>
