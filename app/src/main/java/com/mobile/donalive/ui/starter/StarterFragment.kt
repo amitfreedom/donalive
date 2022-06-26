@@ -42,7 +42,7 @@ class StarterFragment : Fragment() {
             CommonMethod.showMessage(activity,"coming soon...")
         }
         binding.btnPhone.setOnClickListener{
-            CommonMethod.showMessage(activity,"coming soon...")
+           findNavController().navigate(R.id.action_starterFragment_to_phoneFragment)
         }
         binding.btnFacebook.setOnClickListener{
             CommonMethod.showMessage(activity,"coming soon...")

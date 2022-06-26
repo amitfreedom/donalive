@@ -1,5 +1,6 @@
 package com.mobile.donalive.ui.settings
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.widget.Toast
 import com.mobile.donalive.R
 import com.mobile.donalive.databinding.FragmentLoginBinding
 import com.mobile.donalive.databinding.FragmentSettingsBinding
+import com.mobile.donalive.ui.home.activity.HomeActivity
 
 
 class SettingsFragment : Fragment() {
@@ -28,8 +30,8 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnEnter.setOnClickListener {
-            Toast.makeText(activity, "coming soon...work in progress", Toast.LENGTH_SHORT).show()
-        }
+            val mainIntent = Intent(activity, HomeActivity::class.java)
+            startActivity(mainIntent)        }
     }
 
     override fun onDestroyView() {

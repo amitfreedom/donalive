@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyTabStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/app_color1</item>
+        <item name="tabIndicatorHeight">2.5dp</item>
+        <item name="android:elevation">2dp</item>
+        <item name="tabIconTint">@color/white</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabTextColor">@color/light_gray</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

@@ -45,6 +45,9 @@
         <action
             android:id="@+id/action_starterFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_starterFragment_to_phoneFragment"
+            app:destination="@id/phoneFragment" />
     </fragment>
     <fragment
         android:id="@+id/otpVerificationFragment"
@@ -58,4 +61,12 @@
         android:id="@+id/settingsFragment"
         android:name="com.mobile.donalive.ui.settings.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/phoneFragment"
+        android:name="com.mobile.donalive.ui.login.PhoneFragment"
+        android:label="PhoneFragment" >
+        <action
+            android:id="@+id/action_phoneFragment_to_otpVerificationFragment"
+            app:destination="@id/otpVerificationFragment" />
+    </fragment>
 </navigation>

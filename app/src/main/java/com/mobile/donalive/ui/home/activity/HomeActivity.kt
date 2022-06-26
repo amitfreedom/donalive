@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationBarView
 import com.mobile.donalive.R
 import com.mobile.donalive.databinding.ActivityHomeBinding
+import com.mobile.donalive.ui.home.fragments.HomeFragment
 import com.mobile.donalive.ui.login.LoginFragment
 import com.mobile.donalive.ui.login.RegisterFragment
 import com.mobile.donalive.ui.otp.OtpVerificationFragment
@@ -22,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.bottomNav.menu.getItem(0).isCheckable = true
-        setFragment(OtpVerificationFragment())
+        setFragment(HomeFragment())
         setUpNavigation()
 
     }
@@ -31,12 +32,11 @@ class HomeActivity : AppCompatActivity() {
         binding.bottomNav.setOnItemSelectedListener(NavigationBarView.OnItemSelectedListener { item ->
             when(item.itemId){
                 R.id.action_home -> {
-                    setFragment(OtpVerificationFragment())
-                    true
+                    setFragment(HomeFragment())
+
                 }
                 R.id.action_video -> {
-                    setFragment(SettingsFragment())
-                    true
+//                    setFragment(SettingsFragment())
                 }
             }
             true
