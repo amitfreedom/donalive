@@ -16,4 +16,5 @@
     <color name="start_color">#933782</color>
     <color name="end_color">#061147</color>
     <color name="green">#66E66B</color>
+    <color name="very_light">#99EDEBEB</color>
 </resources>

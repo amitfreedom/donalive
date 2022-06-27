@@ -3,10 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ui.home.fragments.PopularFragment">
 
     <RelativeLayout
+        android:background="@drawable/pk2"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="150dp">
@@ -25,5 +27,45 @@
 
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Global"
+            style="@style/HeaderTextStyle"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/icons8_globe"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"/>
+
+        <ImageButton
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons8_filter_24"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"/>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        app:spanCount="3"
+        tools:listitem="@layout/list_item_popular"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
 
 </LinearLayout>

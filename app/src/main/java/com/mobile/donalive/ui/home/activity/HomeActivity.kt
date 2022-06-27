@@ -7,6 +7,7 @@ import com.google.android.material.navigation.NavigationBarView
 import com.mobile.donalive.R
 import com.mobile.donalive.databinding.ActivityHomeBinding
 import com.mobile.donalive.ui.home.fragments.HomeFragment
+import com.mobile.donalive.ui.home.fragments.ProfileFragment
 import com.mobile.donalive.ui.login.LoginFragment
 import com.mobile.donalive.ui.login.RegisterFragment
 import com.mobile.donalive.ui.otp.OtpVerificationFragment
@@ -35,8 +36,8 @@ class HomeActivity : AppCompatActivity() {
                     setFragment(HomeFragment())
 
                 }
-                R.id.action_video -> {
-//                    setFragment(SettingsFragment())
+                R.id.action_user -> {
+                    setFragment(ProfileFragment())
                 }
             }
             true
