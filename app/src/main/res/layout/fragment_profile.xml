@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.home.fragments.ProfileFragment">
 
     <LinearLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -14,7 +16,8 @@
         <RelativeLayout
             android:background="@color/start_color"
             android:layout_width="match_parent"
-            android:layout_height="256dp">
+            android:layout_height="wrap_content"
+            android:paddingBottom="25dp">
 
             <RelativeLayout
                 android:id="@+id/mainLayout"
@@ -53,8 +56,8 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/profile_image"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:src="@drawable/pk2"
                     app:civ_border_width="3dp"
                     app:civ_border_color="@color/app_color2"/>
@@ -102,6 +105,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="16dp"
                         android:text="Lv1"
+                        android:gravity="center"
                         android:paddingHorizontal="6dp"
                         android:background="@drawable/level_bg"
                         style="@style/SmallTextStyle"/>
@@ -128,6 +132,63 @@
             </LinearLayout>
 
         </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_marginVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:padding="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_bean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:drawablePadding="6dp"
+                    style="@style/HeaderTextStyle"
+                    android:drawableTint="#FF9800"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:drawableLeft="@drawable/ic_diamond"
+                    android:textColor="@color/black"
+                    android:drawablePadding="6dp"
+                    style="@style/HeaderTextStyle"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginVertical="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/very_light"/>
 
         <LinearLayout
             android:layout_width="match_parent"
