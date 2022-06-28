@@ -290,6 +290,7 @@
 <!--        8.setting-->
 
         <TextView
+            android:id="@+id/btn_hostRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Host registration form"
