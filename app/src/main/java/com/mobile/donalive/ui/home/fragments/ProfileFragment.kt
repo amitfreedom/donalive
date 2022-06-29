@@ -11,6 +11,8 @@ import com.mobile.donalive.databinding.FragmentChatBinding
 import com.mobile.donalive.databinding.FragmentProfileBinding
 import com.mobile.donalive.ui.home.activity.HomeActivity
 import com.mobile.donalive.ui.profile.HostRegistrationFormActivity
+import com.mobile.donalive.ui.profile.LiveHistoryActivity
+import com.mobile.donalive.ui.profile.MyLevelActivity
 
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding?=null
@@ -29,6 +31,15 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnHostRegister.setOnClickListener{
             val mainIntent = Intent(activity, HostRegistrationFormActivity::class.java)
+            startActivity(mainIntent)
+        }
+
+        binding.btnLevel.setOnClickListener{
+            val mainIntent = Intent(activity, MyLevelActivity::class.java)
+            startActivity(mainIntent)
+        }
+        binding.btnLiveHistory.setOnClickListener{
+            val mainIntent = Intent(activity, LiveHistoryActivity::class.java)
             startActivity(mainIntent)
         }
     }

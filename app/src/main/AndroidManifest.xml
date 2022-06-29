@@ -17,6 +17,12 @@
         android:theme="@style/Theme.DonaApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.profile.LiveHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.MyLevelActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.profile.HostRegistrationFormActivity"
             android:exported="false" />
         <activity

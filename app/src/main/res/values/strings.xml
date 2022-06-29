@@ -141,4 +141,5 @@
     <string name="txt_name">Pretty</string>
     <string name="txt_inbox">Inbox</string>
     <string name="select_payment_receival_type">*Select payment Receival Type:</string>
+    <string name="txt_level">My Level</string>
 </resources>
