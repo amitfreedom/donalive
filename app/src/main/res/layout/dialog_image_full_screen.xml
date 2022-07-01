@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rlTop"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/imgBack"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="15sp"-->
+<!--            android:background="@drawable/ripple_back_effect"-->
+<!--            android:elevation="10dp"-->
+<!--            android:src="@drawable/ic_baseline_keyboard_backspace_24" />-->
+
+
+<!--    </RelativeLayout>-->
+
+
+<!--&lt;!&ndash;    <com.github.chrisbanes.photoview.PhotoView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/imgProfile"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_below="@id/rlTop" />&ndash;&gt;-->
+
+</RelativeLayout>

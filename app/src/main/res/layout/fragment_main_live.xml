@@ -1,17 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/very_light"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".ui.home.fragments.MainLiveFragment">
 
-    <TextView
+
+    <Button
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btnSimple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Coming soon..."
-        android:layout_centerInParent="true"
-        android:textSize="@dimen/sp_20"/>
+        android:text="Host Live"
+        android:textAllCaps="false" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnMultiLive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multi Live"
+        android:textAllCaps="false" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnPK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PK Live"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start ani"
+        android:visibility="gone"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnAni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="animation"
+        android:textAllCaps="false"
+        android:visibility="gone" />
 
 
-</RelativeLayout>
+</LinearLayout>

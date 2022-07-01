@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.fragment.findNavController
 import com.mobile.donalive.MainActivity
 import com.mobile.donalive.R
@@ -31,6 +32,8 @@ class StarterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        takePermission()
 
         binding.btnEmail.setOnClickListener{
             findNavController().navigate(R.id.action_starterFragment_to_loginFragment)
@@ -57,9 +60,32 @@ class StarterFragment : Fragment() {
         }
     }
 
+    private fun takePermission() {
+        multiplePermissionsContract.launch(
+            arrayOf(
+                android.Manifest.permission.CAMERA,
+                android.Manifest.permission.RECORD_AUDIO,
+                android.Manifest.permission.READ_EXTERNAL_STORAGE,
+                android.Manifest.permission.READ_EXTERNAL_STORAGE,
+                android.Manifest.permission.ACCESS_FINE_LOCATION,
+                android.Manifest.permission.ACCESS_COARSE_LOCATION,
+
+                )
+        )
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding=null
+    }
+
+    private val multiplePermissionsContract = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissionsStatusMap ->
+        if (!permissionsStatusMap.containsValue(false)) {
+            // all permissions are accepted
+            Toast.makeText(activity, "all permissions are accepted", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(activity, "all permissions are not accepted", Toast.LENGTH_SHORT).show()
+        }
     }
 
 }

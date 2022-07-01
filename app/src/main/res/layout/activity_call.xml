@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".agora.openvcall.ui.CallActivity">
+
+
+    <com.mobile.donalive.agora.openvcall.ui.layout.GridVideoViewContainer
+        android:id="@+id/grid_video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ViewStub
+        android:id="@id/small_video_view_dock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:inflatedId="@id/small_video_view_dock"
+        android:layout="@layout/small_video_view_dock" />
+
+
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:dragEdge="left"
+        app:mode="same_level">
+
+        <!-- Your secondary layout here -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlUserInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ripple_bg">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgProfile"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_baseline_person_24"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="1dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/imgProfile"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtUserName"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:singleLine="true"
+                                android:text="User NameUser Name"
+                                android:textColor="@color/white"
+                                android:textSize="13dp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtFollowers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:drawableLeft="@drawable/ic_person"
+                                android:text="20k"
+                                android:textColor="@color/white"
+                                android:textSize="11dp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rlUserInfo"
+                        android:layout_marginTop="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_white_bg"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginVertical="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/btn_bg"
+                                android:backgroundTint="@color/white"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_diamond"
+                                android:tint="@color/start_color" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtTotalDiamond"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+
+                                />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/rlUserInfo">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/list_users" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlTop"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlMuteVideo"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:background="@drawable/ripple_bg">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgVideoMute"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_baseline_videocam_24"
+                            android:tint="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlMuteMic"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ripple_bg">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgMuteMic"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_baseline_mic_24"
+                            android:tint="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSwitchCamera"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ripple_bg">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgFlipCamera"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_baseline_flip_camera_ios_24"
+                            android:tint="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlFilter"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ripple_bg">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgFilter"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_baseline_photo_filter_24"
+                            android:tint="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlMultiLiveRequest"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ripple_bg">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgMultiLiveRequest"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_users_copy"
+                            android:tint="@color/white" />
+
+
+                        <RelativeLayout
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/ic_baseline_circle_24">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtTotalRequest"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerAllMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_above="@id/rlBottom"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="116dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/list_live_chat" />
+
+
+                <com.mobile.donalive.agora.heartview.HeartsLayout
+                    android:id="@+id/heartView"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/rlBottom"
+                    android:layout_below="@id/llOption"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="40dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rlBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlGiftHeart"
+                        android:layout_width="86dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/rlHeart"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/ripple_bg">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_dil_icon" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlGift"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@id/rlHeart"
+                            android:background="@drawable/ripple_bg">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_baseline_card_giftcard_24" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlRequestMultiLive"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/rlGiftHeart"
+                        android:background="@drawable/ripple_bg"
+                        android:visibility="gone">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/live_stream"
+                            android:tint="@color/white" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/rlRequestMultiLive">
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@id/rlSend"
+                            android:background="@drawable/edt_background"
+                            android:hint="Send message"
+                            android:inputType="text"
+                            android:paddingVertical="6dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlSend"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/ripple_bg">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_baseline_send_24"
+                                android:tint="@color/white" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/lottieGift"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+
+                />
+
+            <!--                    <com.airbnb.lottie.LottieAnimationView-->
+            <!--                        android:id="@+id/lottieGift"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:visibility="gone"-->
+            <!--                        -->
+            <!--                        app:lottie_autoPlay="true"-->
+            <!--                        app:lottie_loop="false" />-->
+
+        </RelativeLayout>
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+</FrameLayout>

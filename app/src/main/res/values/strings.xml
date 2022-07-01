@@ -142,4 +142,72 @@
     <string name="txt_inbox">Inbox</string>
     <string name="select_payment_receival_type">*Select payment Receival Type:</string>
     <string name="txt_level">My Level</string>
+    <string name="agora_app_id">5003dbe0cc2d4303a7ed8d5ba946ccaa</string>
+
+    <string name="path_search">
+       M141,17 A9,9 0 1,1 142,16 L149,23
+    </string>
+
+
+    <string name="bit_rate_value_with_unit">%d kbps</string>
+    <string name="frame_rate_value_with_unit">%d fps</string>
+    <string name="just_160_diamonds_to_unlock_all_my_private_photos">Just 160 diamonds to unlock all my private photos</string>
+    <string-array name="country"
+
+        >
+
+        <item>All Country</item>
+        <item>India</item>
+        <item>USA</item>
+        <item>UK</item>
+
+
+    </string-array>
+
+    <string name="msg_connection_error">Connection error, please check the network settings or make sure channel name/access token are valid</string>
+
+
+    <string name="label_title_resolution">Resolution</string>
+    <string name="label_title_frame_rate">Frame Rate(fps)</string>
+
+    <string-array name="string_array_resolutions">
+        <item>160x120</item>
+        // 120P
+        <item>320x180</item>
+        // 180P
+        <item>320x240</item>
+        // 240P the default one
+        <item>640x360</item>
+        // 360P
+        <item>640x480</item>
+        // 480P
+        <item>1280x720</item>
+        // 720P
+    </string-array>
+
+    <string-array name="string_array_frame_rate">
+        <item>1</item>
+        <item>7</item>
+        <item>10</item>
+        <item>15</item>
+        // the default one
+        <item>24</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="string_array_bit_rate">
+        <item>80</item>
+        // 120P
+        <item>160</item>
+        // 180P
+        <item>200</item>
+        // 240P
+        <item>400</item>
+        // 360P
+        <item>500</item>
+        // 480P
+        <item>1000</item>
+        // 720P
+    </string-array>
+
 </resources>

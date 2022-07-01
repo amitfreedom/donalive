@@ -1,0 +1,23 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="@color/start_color"
+    tools:targetApi="lollipop">
+
+    <item>
+
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="90dp"
+            android:height="90dp"
+            android:tint="@color/pink"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:fillColor="@android:color/white"
+                android:pathData="M12,2C6.47,2 2,6.47 2,12s4.47,10 10,10 10,-4.47 10,-10S17.53,2 12,2z" />
+        </vector>
+
+
+    </item>
+
+</ripple>
+
