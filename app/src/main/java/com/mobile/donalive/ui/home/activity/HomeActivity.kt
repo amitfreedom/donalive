@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationBarView
 import com.mobile.donalive.R
 import com.mobile.donalive.databinding.ActivityHomeBinding
+import com.mobile.donalive.stream.ChannelFragment
 import com.mobile.donalive.ui.home.fragments.ChatFragment
 import com.mobile.donalive.ui.home.fragments.HomeFragment
 import com.mobile.donalive.ui.home.fragments.MainLiveFragment
@@ -39,7 +40,8 @@ class HomeActivity : AppCompatActivity() {
 
                 }
                 R.id.action_chat -> {
-                    setFragment(ChatFragment())
+                    setFragment(ChannelFragment())
+//                    setFragment(ChatFragment())
                 }
                 R.id.action_user -> {
                     setFragment(ProfileFragment())

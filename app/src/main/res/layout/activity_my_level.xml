@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/very_light"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".ui.profile.MyLevelActivity">
 
@@ -44,6 +44,7 @@
         android:id="@+id/recyclerView"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="3"
+        android:background="@color/start_color"
         tools:listitem="@layout/list_item_level"/>
 
 </LinearLayout>

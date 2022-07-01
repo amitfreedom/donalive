@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "908008539272",
+    "firebase_url": "https://fir-ffb1b-default-rtdb.firebaseio.com",
+    "project_id": "fir-ffb1b",
+    "storage_bucket": "fir-ffb1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908008539272:android:9d9f70128de9650f6ecb3d",
+        "android_client_info": {
+          "package_name": "com.mobile.donalive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908008539272-vm6eprodkcrosq3hlgfmss3mbo2b0omf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0cwfVCDsylzr_Cr7zI0nL-fWfsltLmuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908008539272-vm6eprodkcrosq3hlgfmss3mbo2b0omf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
