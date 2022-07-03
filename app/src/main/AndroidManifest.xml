@@ -26,6 +26,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ui.toplist.TopUsersSendReceiveCoinsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.BalanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.TopUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".agora.openvcall.ui.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.SettingActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.profile.EditProfileActivity"
             android:exported="false" />
         <activity

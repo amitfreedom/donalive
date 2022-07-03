@@ -169,6 +169,12 @@
 
     <string name="label_title_resolution">Resolution</string>
     <string name="label_title_frame_rate">Frame Rate(fps)</string>
+    <string name="account">Account</string>
+    <string name="general">General</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="support">Support</string>
+    <string name="logout">Logout</string>
+    <string name="change_password">Change Password</string>
 
     <string-array name="string_array_resolutions">
         <item>160x120</item>

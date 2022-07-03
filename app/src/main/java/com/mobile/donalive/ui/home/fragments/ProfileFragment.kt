@@ -11,6 +11,7 @@ import com.mobile.donalive.databinding.FragmentChatBinding
 import com.mobile.donalive.databinding.FragmentProfileBinding
 import com.mobile.donalive.ui.home.activity.HomeActivity
 import com.mobile.donalive.ui.profile.*
+import com.mobile.donalive.ui.settings.SettingActivity
 
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding?=null
@@ -52,6 +53,19 @@ class ProfileFragment : Fragment() {
         }
         binding.btnEdit.setOnClickListener {
             val mainIntent = Intent(activity, EditProfileActivity::class.java)
+            startActivity(mainIntent)
+        }
+        binding.btnSettings.setOnClickListener {
+            val mainIntent = Intent(activity, SettingActivity::class.java)
+            startActivity(mainIntent)
+        }
+
+        binding.btnTopUp.setOnClickListener {
+            val mainIntent = Intent(activity, TopUpActivity::class.java)
+            startActivity(mainIntent)
+        }
+        binding.btnBalance.setOnClickListener {
+            val mainIntent = Intent(activity, BalanceActivity::class.java)
             startActivity(mainIntent)
         }
     }

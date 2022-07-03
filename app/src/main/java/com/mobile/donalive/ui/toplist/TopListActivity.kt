@@ -1,9 +1,11 @@
 package com.mobile.donalive.ui.toplist
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.mobile.donalive.databinding.ActivityLiveHistoryBinding
 import com.mobile.donalive.databinding.ActivityTopListBinding
+import com.mobile.donalive.ui.profile.BalanceActivity
 import com.mobile.donalive.ui.profile.adapters.LiveHistoryAdapter
 
 class TopListActivity : AppCompatActivity() {
@@ -16,6 +18,10 @@ class TopListActivity : AppCompatActivity() {
 
         binding.imgBack.setOnClickListener {
             onBackPressed()
+        }
+        binding.btnTopUsers.setOnClickListener {
+            val mainIntent = Intent(this, TopUsersSendReceiveCoinsActivity::class.java)
+            startActivity(mainIntent)
         }
 
     }

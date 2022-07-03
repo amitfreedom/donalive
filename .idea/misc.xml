@@ -74,22 +74,28 @@
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/gradient_bg.xml" value="0.125" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/gradient_bg_top.xml" value="0.1325" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/green_bg.xml" value="0.1175" />
+        <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_bars_code.xml" value="0.1" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.169" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_baseline_brightness_low_24.xml" value="0.1" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.169" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_baseline_live.xml" value="0.169" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_baseline_more_horiz_24.xml" value="0.169" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_baseline_phone_iphone_24.xml" value="0.169" />
+        <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_baseline_sticky_note_2_24.xml" value="0.1" />
+        <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_diamond1.xml" value="0.1" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_facebook.xml" value="0.1" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_facebook_circled.xml" value="0.169" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_icons8_whatsapp.xml" value="0.169" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_launcher_background.xml" value="0.153" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_live.xml" value="0.169" />
+        <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_lock.xml" value="0.1" />
+        <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_notifications_none_black_24dp.xml" value="0.1" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_settings.xml" value="0.1" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/ic_video.xml" value="0.1" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/level_bg_1.xml" value="0.169" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/logo1_background.xml" value="0.153" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/drawable/white_bg.xml" value="0.169" />
+        <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/activity_balance.xml" value="0.16145833333333334" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/activity_call.xml" value="0.1" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/activity_channel.xml" value="0.16145833333333334" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/activity_custom_splash.xml" value="0.25" />
@@ -100,7 +106,11 @@
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/activity_live_history.xml" value="0.1648148148148148" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/activity_pk_live.xml" value="0.1" />
+        <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/activity_setting.xml" value="0.17552083333333332" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/activity_top_list.xml" value="0.165" />
+        <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/activity_top_up.xml" value="0.16145833333333334" />
+        <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/activity_top_users_send_receive_coins.xml" value="0.17552083333333332" />
+        <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/change_password_layout.xml" value="0.17447916666666666" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/fragment_channel.xml" value="0.17552083333333332" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/fragment_chat.xml" value="0.17552083333333332" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/fragment_home.xml" value="0.17552083333333332" />
@@ -109,7 +119,7 @@
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/fragment_otp_verification.xml" value="0.17552083333333332" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/fragment_phone.xml" value="0.16145833333333334" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/fragment_popular.xml" value="0.25" />
-        <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/fragment_profile.xml" value="0.165" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/fragment_register.xml" value="0.17552083333333332" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/fragment_settings.xml" value="0.165" />
         <entry key="..\:/donalive/DonaLive/app/src/main/res/layout/fragment_starter.xml" value="0.25" />
