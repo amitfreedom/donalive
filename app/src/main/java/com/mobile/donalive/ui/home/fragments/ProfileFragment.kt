@@ -10,9 +10,7 @@ import com.mobile.donalive.R
 import com.mobile.donalive.databinding.FragmentChatBinding
 import com.mobile.donalive.databinding.FragmentProfileBinding
 import com.mobile.donalive.ui.home.activity.HomeActivity
-import com.mobile.donalive.ui.profile.HostRegistrationFormActivity
-import com.mobile.donalive.ui.profile.LiveHistoryActivity
-import com.mobile.donalive.ui.profile.MyLevelActivity
+import com.mobile.donalive.ui.profile.*
 
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding?=null
@@ -42,6 +40,26 @@ class ProfileFragment : Fragment() {
             val mainIntent = Intent(activity, LiveHistoryActivity::class.java)
             startActivity(mainIntent)
         }
+
+        binding.btnFriends.setOnClickListener {
+            moveToNext("Friends List")
+        }
+        binding.btnFollowers.setOnClickListener {
+            moveToNext("Followers")
+        }
+        binding.btnFollowing.setOnClickListener {
+            moveToNext("Following")
+        }
+        binding.btnEdit.setOnClickListener {
+            val mainIntent = Intent(activity, EditProfileActivity::class.java)
+            startActivity(mainIntent)
+        }
+    }
+
+    private fun moveToNext(title: String) {
+        val mainIntent = Intent(activity, FriendsFollowersFollowingActivity::class.java)
+        mainIntent.putExtra("appBarTitle",title)
+        startActivity(mainIntent)
     }
 
     override fun onDestroyView() {

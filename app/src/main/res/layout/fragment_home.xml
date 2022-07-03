@@ -39,7 +39,7 @@
             android:layout_alignParentRight="true"
             android:background="@null"
             android:padding="10dp"
-            android:src="@drawable/ic_cup"/>
+            android:src="@drawable/ic_cup" />
 
 
     </RelativeLayout>

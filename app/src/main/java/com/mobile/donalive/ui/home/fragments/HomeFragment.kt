@@ -1,5 +1,6 @@
 package com.mobile.donalive.ui.home.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.Gravity
@@ -11,6 +12,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.mobile.donalive.databinding.FragmentHomeBinding
 import com.mobile.donalive.ui.home.adapters.TabAdapter
+import com.mobile.donalive.ui.profile.LiveHistoryActivity
+import com.mobile.donalive.ui.toplist.TopListActivity
 
 
 class HomeFragment : Fragment() {
@@ -31,6 +34,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setUpClick()
+
         val tabTitles = arrayOf("Freshers","Popular","Spotlight","Party","PK Matches")
         val simpleTabList : MutableList<Fragment> = ArrayList()
         simpleTabList.add(MainLiveFragment())
@@ -46,6 +51,12 @@ class HomeFragment : Fragment() {
 
     }
 
+    private fun setUpClick() {
+        binding.ivWinner.setOnClickListener {
+            val mainIntent = Intent(activity, TopListActivity::class.java)
+            startActivity(mainIntent)
+        }
+    }
 
 
     override fun onDestroyView() {
