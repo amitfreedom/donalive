@@ -5,11 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.mobile.donalive.AuthViewModel
+import com.mobile.donalive.ui.login.viewmodel.AuthViewModel
 import com.mobile.donalive.R
 import com.mobile.donalive.databinding.FragmentLoginBinding
 import com.mobile.donalive.models.UserRequest
@@ -39,7 +40,11 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnLogin.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+//            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+
+
+
+
 //            val validateResult=validateUserInput()
 
 //            if (validateResult.first){
@@ -52,8 +57,28 @@ class LoginFragment : Fragment() {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
 
-        bindObserve()
+//        bindObserve()
+
+//        genToken()
     }
+
+//    private fun genToken() {
+//            authViewModel.tokenResponseLiveData.observe(viewLifecycleOwner, Observer {
+//                binding.progressBar.isVisible=false
+//                when(it){
+//                    is NetworkResult.Success ->{
+//                        Toast.makeText(activity, "data ==>"+it.data?.message, Toast.LENGTH_SHORT).show()
+////                    findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
+//                    }
+//                    is NetworkResult.Error ->{
+//                        binding.txtError.text=it.message
+//                    }
+//                    is NetworkResult.Loading ->{
+//                        binding.progressBar.isVisible=true
+//                    }
+//                }
+//            })
+//    }
 
     private fun getUserRequest(): UserRequest {
         val emailAddress=binding.txtEmail.text.toString().trim()
@@ -61,10 +86,10 @@ class LoginFragment : Fragment() {
         return UserRequest(emailAddress,password, "")
     }
 
-    private fun validateUserInput(): Pair<Boolean, String> {
-        val userRequest=getUserRequest()
-        return authViewModel.validateCredentials(userRequest.email,"",userRequest.password,true)
-    }
+//    private fun validateUserInput(): Pair<Boolean, String> {
+//        val userRequest=getUserRequest()
+//        return authViewModel.validateCredentials(userRequest.email,"",userRequest.password,true)
+//    }
 
     private fun bindObserve() {
         authViewModel.userResponseLiveData.observe(viewLifecycleOwner, Observer {

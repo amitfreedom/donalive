@@ -1,13 +1,16 @@
-package com.mobile.donalive
+package com.mobile.donalive.ui.login.viewmodel
 
 import android.text.TextUtils
 import android.util.Patterns
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.mobile.donalive.modelclass.LiveMultiliveTokemModel
 import com.mobile.donalive.models.UserRequest
 import com.mobile.donalive.models.UserResponse
+import com.mobile.donalive.ui.login.models.VerifyPhoneEmailResponse
 import com.mobile.donalive.repository.UserRepository
+import com.mobile.donalive.ui.login.models.VerifyPhoneEmailRequest
 import com.mobile.donalive.utils.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -31,18 +34,15 @@ class AuthViewModel @Inject constructor(private val userRepository: UserReposito
         }
     }
 
-    fun validateCredentials(emailAddress: String, userName: String, password: String,isLogin:Boolean) : Pair<Boolean, String> {
+    // verifyPhoneEmail
 
-        var result = Pair(true, "")
-        if(TextUtils.isEmpty(emailAddress) || (!isLogin && TextUtils.isEmpty(userName)) || TextUtils.isEmpty(password)){
-            result = Pair(false, "Please provide the credentials")
+    val verifyPhoneEmailResponseLiveData : LiveData<NetworkResult<VerifyPhoneEmailResponse>>
+        get() = userRepository.verifyPhoneEmailResponseLiveData
+
+    fun verifyPhoneEmail(verifyPhoneEmail: VerifyPhoneEmailRequest){
+        viewModelScope.launch {
+            userRepository.verifyPhoneEmail(verifyPhoneEmail)
         }
-        else if(!Patterns.EMAIL_ADDRESS.matcher(emailAddress).matches()){
-            result = Pair(false, "Email is invalid")
-        }
-        else if(!TextUtils.isEmpty(password) && password.length <= 5){
-            result = Pair(false, "Password length should be greater than 5")
-        }
-        return result
     }
+
 }

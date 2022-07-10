@@ -3,7 +3,8 @@ package com.mobile.donalive.api
 import com.mobile.donalive.modelclass.LiveMultiliveTokemModel
 import com.mobile.donalive.models.UserRequest
 import com.mobile.donalive.models.UserResponse
-import retrofit2.Call
+import com.mobile.donalive.ui.login.models.VerifyPhoneEmailRequest
+import com.mobile.donalive.ui.login.models.VerifyPhoneEmailResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.FieldMap
@@ -18,7 +19,8 @@ interface UserAPI {
     suspend fun signin(@Body userRequest: UserRequest) : Response<UserResponse>
 
 
-    @FormUrlEncoded
-    @POST("live-Multi-Live-Token")
-    suspend fun liveMultiLiveAgora(@FieldMap data: HashMap<String, String>): Call<LiveMultiliveTokemModel>
+    @POST("auth/verify-phone-email")
+    suspend fun verifyPhoneEmail(@Body verifyPhoneEmail:VerifyPhoneEmailRequest): Response<VerifyPhoneEmailResponse>
+
+
 }

@@ -1,11 +1,14 @@
 package com.mobile.donalive.di
 
+import com.mobile.donalive.api.AuthInterceptor
 import com.mobile.donalive.api.UserAPI
+import com.mobile.donalive.utils.Constants
 import com.mobile.donalive.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
@@ -16,17 +19,29 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun providesRetrofit():Retrofit{
-        return Retrofit.Builder()
+    fun providesRetrofit(): Retrofit.Builder {
+        return Retrofit.Builder().baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BASE_URL)
-            .build()
     }
 
     @Singleton
     @Provides
-    fun providesUserAPI(retrofit: Retrofit):UserAPI{
-        return retrofit.create(UserAPI::class.java)
+    fun provideOkHttpClient(interceptor: AuthInterceptor): OkHttpClient {
+        return OkHttpClient.Builder().addInterceptor(interceptor).build()
     }
+
+    @Singleton
+    @Provides
+    fun providesUserAPI(retrofitBuilder: Retrofit.Builder): UserAPI {
+        return retrofitBuilder.build().create(UserAPI::class.java)
+    }
+
+//    @Singleton
+//    @Provides
+//    fun providesNoteAPI(retrofitBuilder: Retrofit.Builder, okHttpClient: OkHttpClient): NoteAPI {
+//        return retrofitBuilder.client(okHttpClient).build().create(NoteAPI::class.java)
+//    }
+
+
 
 }
