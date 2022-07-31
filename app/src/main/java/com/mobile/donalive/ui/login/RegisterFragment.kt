@@ -11,6 +11,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.mobile.donalive.R
 import com.mobile.donalive.ui.login.viewmodel.AuthViewModel
 import com.mobile.donalive.databinding.FragmentRegisterBinding
 import com.mobile.donalive.ui.login.models.VerifyPhoneEmailRequest
@@ -87,7 +88,7 @@ class RegisterFragment : Fragment() {
                         "" + it.data?.message + "\n" + "otp : " + it.data?.otp,
                         Toast.LENGTH_SHORT
                     ).show()
-//                    findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
+                    findNavController().navigate(R.id.action_registerFragment_to_otpVerificationFragment)
                 }
                 is NetworkResult.Error -> {
                     binding.txtError.text = it.message

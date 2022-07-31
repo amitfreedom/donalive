@@ -2,7 +2,8 @@ package com.mobile.donalive.utils
 
 object Constants {
     const val TAG = "NOTEAPPLICATION"
-    const val BASE_URL = "https://prettylivestreaming.com/"
+    const val BASE_URL = "https://prettylivestreaming.com/auth/"
+//    const val BASE_URL = "http://3.21.15.237/dona-live/auth/"
 //    const val BASE_URL = "https://notes-api-sample.herokuapp.com/"
 
     const val USER_TOKEN = "user_token"

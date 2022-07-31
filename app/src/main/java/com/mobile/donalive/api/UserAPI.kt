@@ -18,8 +18,7 @@ interface UserAPI {
     @POST("/users/signin")
     suspend fun signin(@Body userRequest: UserRequest) : Response<UserResponse>
 
-
-    @POST("auth/verify-phone-email")
+    @POST("verify-phone-email")
     suspend fun verifyPhoneEmail(@Body verifyPhoneEmail:VerifyPhoneEmailRequest): Response<VerifyPhoneEmailResponse>
 
 
