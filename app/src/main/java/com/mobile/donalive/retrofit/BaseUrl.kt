@@ -8,7 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 class BaseUrl {
-    private val BASE_URL = "https://pikulive.hymsihealth.com/index.php/"
+//    private val BASE_URL = "https://pikulive.hymsihealth.com/index.php/"
+    private val BASE_URL = ""
     private var retrofit: Retrofit? = null
 
     fun getClient(): Retrofit? {

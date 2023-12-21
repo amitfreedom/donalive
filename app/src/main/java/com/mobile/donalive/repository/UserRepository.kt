@@ -57,10 +57,11 @@ class UserRepository @Inject constructor(private val userAPI: UserAPI) {
         if (response.isSuccessful && response.body() != null) {
             _verifyPhoneEmailResponseLiveData.postValue(NetworkResult.Success(response.body()!!))
         }
-        else if (response.errorBody() != null) {
-            val errorObj = JSONObject(response.errorBody()!!.charStream().readText())
-            _verifyPhoneEmailResponseLiveData.postValue(NetworkResult.Error(errorObj.getString("message")))
-        } else {
+//        else if (response.errorBody() != null) {
+//            val errorObj = JSONObject(response.errorBody()!!.charStream().readText())
+//            _verifyPhoneEmailResponseLiveData.postValue(NetworkResult.Error(errorObj.getString("message")))
+//        }
+        else {
             _verifyPhoneEmailResponseLiveData.postValue(NetworkResult.Error("something went wrong"))
         }
     }

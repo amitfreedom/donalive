@@ -3,7 +3,6 @@ package com.mobile.donalive.ui.profile
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.mobile.donalive.R
-import com.mobile.donalive.databinding.ActivityHomeBinding
 import com.mobile.donalive.databinding.ActivityLiveHistoryBinding
 import com.mobile.donalive.ui.profile.adapters.LiveHistoryAdapter
 import com.mobile.donalive.ui.profile.adapters.MyLevelAdapter
